@@ -19,7 +19,8 @@ class HomeViewController: UIViewController {
 
 
     @IBAction func goToOtherScreens(_ sender: Any) {
-        
+        let viewController = TechnicalSupportViewController()
+        navigationController?.pushViewController(viewController, animated: true)
     }
 
 
