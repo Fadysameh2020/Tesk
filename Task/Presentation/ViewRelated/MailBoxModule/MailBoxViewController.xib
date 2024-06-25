@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MailBoxViewController" customModule="Task" customModuleProvider="target">
             <connections>
-                <outlet property="segmentedControl" destination="XFZ-H2-1Ij" id="VVy-eI-v4a"/>
+                <outlet property="segmentedControlView" destination="1mf-0f-ELD" id="EFe-eE-Xlb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,36 +20,32 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XFZ-H2-1Ij">
-                    <rect key="frame" x="20" y="59" width="353" height="51"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1mf-0f-ELD" customClass="CustomSegmentControl" customModule="Task" customModuleProvider="target">
+                    <rect key="frame" x="20" y="59" width="353" height="50"/>
                     <color key="backgroundColor" name="CustomGrey"/>
+                    <color key="tintColor" name="CustomGrey"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="jYq-lZ-T8P"/>
+                        <constraint firstAttribute="height" constant="50" id="xlR-wY-aLi"/>
                     </constraints>
-                    <segments>
-                        <segment title="Received"/>
-                        <segment title="Sent"/>
-                    </segments>
-                    <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                             <color key="value" name="CustomGrey"/>
                         </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="20"/>
-                        </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                            <real key="value" value="8"/>
+                            <real key="value" value="0.0"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
-                </segmentedControl>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="XFZ-H2-1Ij" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="1Za-Ra-1Dh"/>
-                <constraint firstItem="XFZ-H2-1Ij" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="eCY-Yh-4EU"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XFZ-H2-1Ij" secondAttribute="trailing" constant="20" id="nko-85-dYU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1mf-0f-ELD" secondAttribute="trailing" constant="20" id="Fdm-VC-tRq"/>
+                <constraint firstItem="1mf-0f-ELD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Jmu-Kd-siI"/>
+                <constraint firstItem="1mf-0f-ELD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="cdO-h1-0w5"/>
             </constraints>
             <point key="canvasLocation" x="65" y="20"/>
         </view>

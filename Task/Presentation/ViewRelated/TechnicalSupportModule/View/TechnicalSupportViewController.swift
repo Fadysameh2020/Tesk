@@ -57,18 +57,11 @@ extension TechnicalSupportViewController {
 extension TechnicalSupportViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return 1
-        case 1:
-            return 1
-        default:
             return 4
-        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -87,44 +80,9 @@ extension TechnicalSupportViewController: UITableViewDelegate, UITableViewDataSo
         let viewController = MailBoxViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
-
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "header") as! CustomHeaderView
-        
-        switch section {
-        case 0:
-            headerView.titleLabel.text = "SUPPORT EMAIL"
-            headerView.titleLabel.textColor = .gray
-        case 1:
-            headerView.titleLabel.text = "Administration CALL"
-            headerView.titleLabel.textColor = .gray
-        default:
-            headerView.titleLabel.text = "Storehouses CALL"
-            headerView.titleLabel.textColor = .black
-
-        }
-        return headerView
-    }
-    
-    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        guard let header = view as? UITableViewHeaderFooterView else { return }
-        
-        switch section {
-        case 0, 1:
-            header.textLabel?.textColor = .gray
-        case 2:
-            header.textLabel?.textColor = .black
-        default:
-            header.textLabel?.textColor = .black
-        }
-    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 68.16
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 44 // Adjust the height as needed
     }
     
 }
