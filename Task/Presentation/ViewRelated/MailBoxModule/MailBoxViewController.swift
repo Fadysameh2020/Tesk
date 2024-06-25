@@ -13,9 +13,24 @@ class MailBoxViewController: UIViewController {
     @IBOutlet weak var segmentedControlView: CustomSegmentControl!
     @IBOutlet private weak var mainTableView: UITableView!
     
+    @IBOutlet weak var addButton: UIButton!
     private var cancellables = Set<AnyCancellable>()
-
+    
+    lazy private var alertView: NewMailBoxView = {
+        let alert = NewMailBoxView()
+        alert.layer.cornerRadius = 16
+        alert.translatesAutoresizingMaskIntoConstraints = false // Enable Auto Layout
+        return alert
+    }()
+    
+    private var alertViewCenterYConstraint: NSLayoutConstraint?
+    private var alertViewBottomConstraint: NSLayoutConstraint?
+    
     var messages: [MailBoxMessage] = [
+        MailBoxMessage(),
+        MailBoxMessage(),
+        MailBoxMessage(),
+        MailBoxMessage(),
         MailBoxMessage(),
         MailBoxMessage(),
         MailBoxMessage(isRead: true),
@@ -27,8 +42,10 @@ class MailBoxViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupUI()
+        setupAddNewMailAlert()
+        addButton.isHidden = false
     }
     
     @IBAction func clearMessagesOnPressed(_ sender: Any) {
@@ -36,7 +53,18 @@ class MailBoxViewController: UIViewController {
         mainTableView.reloadData()
     }
     
+    @IBAction func addMessageOnPressed(_ sender: Any) {
+        showAlertView()
+    }
+    
+}
 
+extension MailBoxViewController {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        removeAlertView()
+    }
+    
 }
 
 extension MailBoxViewController {
@@ -45,6 +73,65 @@ extension MailBoxViewController {
         setupTableViewDelegates()
         setupBackButton()
         setupSegmentControlObserver()
+    }
+    
+    private func setupAddNewMailAlert() {
+        alertView
+            .addObserver()
+        
+        alertView
+            .doneButtonPublisher
+            .sink { [weak self] _ in
+                guard let self = self else { return }
+                removeAlertView()
+            }
+            .store(in: &cancellables)
+    }
+    
+    private func showAlertView() {
+        if !alertView.isDescendant(of: view) {
+            self.view.addSubview(self.alertView)
+            
+            // Initial constraints for the alert view
+            NSLayoutConstraint.activate([
+                alertView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                alertView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                alertView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.86) // 5/6 of the view's height
+            ])
+            
+            alertViewCenterYConstraint = alertView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            alertViewCenterYConstraint?.isActive = true
+            
+            self.view.layoutIfNeeded()
+            
+            // Animate the alert view to the bottom of the screen
+            UIView.animate(withDuration: 0.4, animations: {
+                self.alertViewCenterYConstraint?.isActive = false
+                self.alertViewBottomConstraint = self.alertView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
+                self.alertViewBottomConstraint?.isActive = true
+                self.view.layoutIfNeeded()
+                self.view.backgroundColor = UIColor.white.withAlphaComponent(0.4)
+            })
+            mainTableView.isUserInteractionEnabled = false
+        }
+    }
+    
+    private func removeAlertView() {
+        if alertView.isDescendant(of: view) {
+            // Animate the alert view back to the center of the screen
+            UIView.animate(withDuration: 0.4, animations: {
+                self.alertViewBottomConstraint?.isActive = false
+                self.alertViewCenterYConstraint?.isActive = true
+                self.view.layoutIfNeeded()
+                self.view.backgroundColor = UIColor.white
+            }) { [weak self] completed in
+                guard let self = self else { return }
+                if completed {
+                    self.alertView.removeFromSuperview()
+                }
+            }
+            mainTableView.isUserInteractionEnabled = true
+        }
     }
     
     private func setupTableViewDelegates() {
@@ -80,12 +167,17 @@ extension MailBoxViewController {
             messages = [
                 MailBoxMessage(),
                 MailBoxMessage(),
+                MailBoxMessage(),
+                MailBoxMessage(),
+                MailBoxMessage(),
+                MailBoxMessage(),
                 MailBoxMessage(isRead: true),
                 MailBoxMessage(isRead: true),
                 MailBoxMessage(isRead: true),
                 MailBoxMessage(isRead: true),
                 MailBoxMessage(isRead: true)
             ]
+            addButton.isHidden = false
         case 1:
             // Handle second segment
             print("Second segment selected")
@@ -104,6 +196,7 @@ extension MailBoxViewController {
                 MailBoxMessage(isRead: true),
                 MailBoxMessage(isRead: true)
             ]
+            addButton.isHidden = true
         default:
             break
         }
@@ -154,7 +247,7 @@ extension MailBoxViewController: UITableViewDelegate, UITableViewDataSource {
             cell.titleLabel.textColor = UIColor.black
             cell.subTitleLabel.textColor = UIColor.black
         }
-
+        
         return cell
     }
     
