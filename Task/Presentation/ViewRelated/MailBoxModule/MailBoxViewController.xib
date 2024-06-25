@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MailBoxViewController" customModule="Task" customModuleProvider="target">
             <connections>
+                <outlet property="mainTableView" destination="KU6-Vy-cDk" id="vI2-FB-rhE"/>
                 <outlet property="segmentedControlView" destination="1mf-0f-ELD" id="EFe-eE-Xlb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -39,20 +40,54 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqA-Jv-IBk">
+                    <rect key="frame" x="10" y="133" width="114" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Clear All Mails">
+                        <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="13"/>
+                        <color key="baseForegroundColor" name="RedColor"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="clearMessagesOnPressed:" destination="-1" eventType="touchUpInside" id="pQp-O5-aXT"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SoL-4J-o1k">
+                    <rect key="frame" x="21.999999999999993" y="156" width="91.333333333333314" height="1"/>
+                    <color key="backgroundColor" name="RedColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="4e1-6l-nbg"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KU6-Vy-cDk">
+                    <rect key="frame" x="0.0" y="183" width="373" height="615"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="SoL-4J-o1k" firstAttribute="top" secondItem="dqA-Jv-IBk" secondAttribute="bottom" constant="-7" id="4um-4o-hBp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="KU6-Vy-cDk" secondAttribute="bottom" constant="20" id="7qq-d9-HEa"/>
+                <constraint firstItem="dqA-Jv-IBk" firstAttribute="top" secondItem="1mf-0f-ELD" secondAttribute="bottom" constant="24" id="8nL-wk-XBg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1mf-0f-ELD" secondAttribute="trailing" constant="20" id="Fdm-VC-tRq"/>
                 <constraint firstItem="1mf-0f-ELD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Jmu-Kd-siI"/>
+                <constraint firstItem="SoL-4J-o1k" firstAttribute="width" secondItem="dqA-Jv-IBk" secondAttribute="width" multiplier="0.8" id="Kr2-Pl-coJ"/>
+                <constraint firstItem="KU6-Vy-cDk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Uqy-1f-FJC"/>
+                <constraint firstItem="dqA-Jv-IBk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="anV-4y-Vbs"/>
                 <constraint firstItem="1mf-0f-ELD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="cdO-h1-0w5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KU6-Vy-cDk" secondAttribute="trailing" constant="20" id="fEG-xj-qcJ"/>
+                <constraint firstItem="KU6-Vy-cDk" firstAttribute="top" secondItem="dqA-Jv-IBk" secondAttribute="bottom" constant="20" id="hxj-fN-PVd"/>
+                <constraint firstItem="SoL-4J-o1k" firstAttribute="leading" secondItem="dqA-Jv-IBk" secondAttribute="leading" constant="12" id="qWO-wo-5jD"/>
             </constraints>
-            <point key="canvasLocation" x="65" y="20"/>
+            <point key="canvasLocation" x="64.885496183206101" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
         <namedColor name="CustomGrey">
             <color red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="RedColor">
+            <color red="1" green="0.17254901960784313" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

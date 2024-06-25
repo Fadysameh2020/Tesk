@@ -11,10 +11,21 @@ class TechnicalSupportViewController: UIViewController {
     
     @IBOutlet private weak var mainTableView: UITableView!
     
+    @IBOutlet private weak var supportEmailView: SupportEMailCustomView!
+    
+    @IBOutlet private weak var adminstrationCallView: AdministrationCallCustomView!
+    
+    let storeNames: [String] = [
+        "Jeddah Storehouse",
+        "Riyadh Storehouse",
+        "Mecca Storehouse"
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
+
     }
 
 }
@@ -24,6 +35,18 @@ extension TechnicalSupportViewController {
         registerCells()
         setupTableViewDelegates()
         setupBackButton()
+        
+        supportEmailView.addTapGesture(tapNumber: 1) { [weak self] _ in
+            guard let self = self else { return }
+            let viewController = MailBoxViewController()
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+        
+        adminstrationCallView.addTapGesture(tapNumber: 1) { [weak self] _ in
+            guard let self = self else { return }
+            print("adminstrationCallView pressed")
+        }
+        
     }
     
     private func setupTableViewDelegates() {
@@ -61,17 +84,14 @@ extension TechnicalSupportViewController: UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return 4
+        return storeNames.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as MailBoxTableViewCell
         
-        let mails: Int = 12
-        let answered: Int = 11
-        
-        cell.titleLabel?.text = "Mail Box"
-        cell.subTitleLabel?.text = "\(mails) Mails Sent. \(answered) Answered "
+        cell.titleLabel?.text = storeNames[indexPath.row]
+        cell.subTitleLabel?.text = "+966 (297) 059-1607"
         return cell
     }
     
