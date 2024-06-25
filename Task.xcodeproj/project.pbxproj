@@ -32,6 +32,8 @@
 		00B2B6BE2C29E21C0071401E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 00B2B6BD2C29E21C0071401E /* Base */; };
 		00B2B6CA2C29E31E0071401E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2B6C82C29E31E0071401E /* HomeViewController.swift */; };
 		00B2B6CB2C29E31E0071401E /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00B2B6C92C29E31E0071401E /* HomeViewController.xib */; };
+		00C255862C2B4D690056E347 /* NewMailBoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00C255852C2B4D690056E347 /* NewMailBoxView.xib */; };
+		00C255872C2B4D690056E347 /* NewMailBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C255842C2B4D690056E347 /* NewMailBoxView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		00B2B6BF2C29E21C0071401E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00B2B6C82C29E31E0071401E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		00B2B6C92C29E31E0071401E /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		00C255842C2B4D690056E347 /* NewMailBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMailBoxView.swift; sourceTree = "<group>"; };
+		00C255852C2B4D690056E347 /* NewMailBoxView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewMailBoxView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 		006A21EE2C29E81100A89B6F /* ViewRelated */ = {
 			isa = PBXGroup;
 			children = (
+				00C255832C2B4D2E0056E347 /* NewMailBoxModule */,
 				006A21FF2C29FE4C00A89B6F /* MailBoxModule */,
 				006A21E72C29E73600A89B6F /* TechnicalSupportModule */,
 				00B2B6C72C29E3070071401E /* HomeModule */,
@@ -260,6 +265,15 @@
 			path = HomeModule;
 			sourceTree = "<group>";
 		};
+		00C255832C2B4D2E0056E347 /* NewMailBoxModule */ = {
+			isa = PBXGroup;
+			children = (
+				00C255842C2B4D690056E347 /* NewMailBoxView.swift */,
+				00C255852C2B4D690056E347 /* NewMailBoxView.xib */,
+			);
+			path = NewMailBoxModule;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -318,6 +332,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00C255862C2B4D690056E347 /* NewMailBoxView.xib in Resources */,
 				006A220C2C2A0B7200A89B6F /* CustomSegmentControl.xib in Resources */,
 				00B2B6BB2C29E21C0071401E /* Assets.xcassets in Resources */,
 				00A3502D2C2AD4AF002B312C /* AdministrationCallCustomView.xib in Resources */,
@@ -338,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00C255872C2B4D690056E347 /* NewMailBoxView.swift in Sources */,
 				006A220D2C2A0B7200A89B6F /* CustomSegmentControl.swift in Sources */,
 				006A21F02C29E82700A89B6F /* BaseViewController.swift in Sources */,
 				006A21F72C29EB0400A89B6F /* MailBoxTableViewCell.swift in Sources */,
