@@ -9,13 +9,15 @@ import UIKit
 
 class MailBoxViewController: UIViewController {
 
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
+//    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
+    @IBOutlet weak var segmentedControlView: CustomSegmentControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupUI()
+        
         
     }
 

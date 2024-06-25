@@ -19,6 +19,13 @@
 		006A22042C29FF0E00A89B6F /* MailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A22012C29FF0E00A89B6F /* MailTableViewCell.swift */; };
 		006A22072C29FF6800A89B6F /* MailBoxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006A22062C29FF6800A89B6F /* MailBoxViewController.xib */; };
 		006A22082C29FF6800A89B6F /* MailBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A22052C29FF6800A89B6F /* MailBoxViewController.swift */; };
+		006A220C2C2A0B7200A89B6F /* CustomSegmentControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006A220B2C2A0B7200A89B6F /* CustomSegmentControl.xib */; };
+		006A220D2C2A0B7200A89B6F /* CustomSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A220A2C2A0B7200A89B6F /* CustomSegmentControl.swift */; };
+		006A220F2C2A0B9C00A89B6F /* NibLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A220E2C2A0B9C00A89B6F /* NibLoadingView.swift */; };
+		00A350272C2ACCD2002B312C /* SupportEMailCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A350252C2ACCD2002B312C /* SupportEMailCustomView.swift */; };
+		00A350282C2ACCD2002B312C /* SupportEMailCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00A350262C2ACCD2002B312C /* SupportEMailCustomView.xib */; };
+		00A3502C2C2AD4AF002B312C /* AdministrationCallCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A3502A2C2AD4AF002B312C /* AdministrationCallCustomView.swift */; };
+		00A3502D2C2AD4AF002B312C /* AdministrationCallCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00A3502B2C2AD4AF002B312C /* AdministrationCallCustomView.xib */; };
 		00B2B6B22C29E21A0071401E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2B6B12C29E21A0071401E /* AppDelegate.swift */; };
 		00B2B6B42C29E21A0071401E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2B6B32C29E21A0071401E /* SceneDelegate.swift */; };
 		00B2B6BB2C29E21C0071401E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00B2B6BA2C29E21C0071401E /* Assets.xcassets */; };
@@ -40,6 +47,13 @@
 		006A22022C29FF0E00A89B6F /* MailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MailTableViewCell.xib; sourceTree = "<group>"; };
 		006A22052C29FF6800A89B6F /* MailBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailBoxViewController.swift; sourceTree = "<group>"; };
 		006A22062C29FF6800A89B6F /* MailBoxViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MailBoxViewController.xib; sourceTree = "<group>"; };
+		006A220A2C2A0B7200A89B6F /* CustomSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentControl.swift; sourceTree = "<group>"; };
+		006A220B2C2A0B7200A89B6F /* CustomSegmentControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSegmentControl.xib; sourceTree = "<group>"; };
+		006A220E2C2A0B9C00A89B6F /* NibLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadingView.swift; sourceTree = "<group>"; };
+		00A350252C2ACCD2002B312C /* SupportEMailCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportEMailCustomView.swift; sourceTree = "<group>"; };
+		00A350262C2ACCD2002B312C /* SupportEMailCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupportEMailCustomView.xib; sourceTree = "<group>"; };
+		00A3502A2C2AD4AF002B312C /* AdministrationCallCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdministrationCallCustomView.swift; sourceTree = "<group>"; };
+		00A3502B2C2AD4AF002B312C /* AdministrationCallCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdministrationCallCustomView.xib; sourceTree = "<group>"; };
 		00B2B6AE2C29E21A0071401E /* Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00B2B6B12C29E21A0071401E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00B2B6B32C29E21A0071401E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +133,7 @@
 			children = (
 				006A21FA2C29EBF200A89B6F /* UITableView+Extension.swift */,
 				006A21FC2C29EDB300A89B6F /* UIView+DD.swift */,
+				006A220E2C2A0B9C00A89B6F /* NibLoadingView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -148,6 +163,43 @@
 				006A22022C29FF0E00A89B6F /* MailTableViewCell.xib */,
 			);
 			path = MailTableViewCell;
+			sourceTree = "<group>";
+		};
+		006A22092C2A0B5100A89B6F /* CustomSegmentControl */ = {
+			isa = PBXGroup;
+			children = (
+				006A220A2C2A0B7200A89B6F /* CustomSegmentControl.swift */,
+				006A220B2C2A0B7200A89B6F /* CustomSegmentControl.xib */,
+			);
+			path = CustomSegmentControl;
+			sourceTree = "<group>";
+		};
+		00A350232C2ACC9A002B312C /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				00A350292C2AD486002B312C /* AdministrationCallCustomView */,
+				00A350242C2ACCAF002B312C /* SupportEMailCustomView */,
+				006A22092C2A0B5100A89B6F /* CustomSegmentControl */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		00A350242C2ACCAF002B312C /* SupportEMailCustomView */ = {
+			isa = PBXGroup;
+			children = (
+				00A350252C2ACCD2002B312C /* SupportEMailCustomView.swift */,
+				00A350262C2ACCD2002B312C /* SupportEMailCustomView.xib */,
+			);
+			path = SupportEMailCustomView;
+			sourceTree = "<group>";
+		};
+		00A350292C2AD486002B312C /* AdministrationCallCustomView */ = {
+			isa = PBXGroup;
+			children = (
+				00A3502A2C2AD4AF002B312C /* AdministrationCallCustomView.swift */,
+				00A3502B2C2AD4AF002B312C /* AdministrationCallCustomView.xib */,
+			);
+			path = AdministrationCallCustomView;
 			sourceTree = "<group>";
 		};
 		00B2B6A52C29E21A0071401E = {
@@ -182,6 +234,7 @@
 		00B2B6C52C29E2C80071401E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				00A350232C2ACC9A002B312C /* ReusableViews */,
 				006A21F32C29EAC900A89B6F /* Cells */,
 				006A21EE2C29E81100A89B6F /* ViewRelated */,
 				006A21ED2C29E80800A89B6F /* Bases */,
@@ -265,10 +318,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				006A220C2C2A0B7200A89B6F /* CustomSegmentControl.xib in Resources */,
 				00B2B6BB2C29E21C0071401E /* Assets.xcassets in Resources */,
+				00A3502D2C2AD4AF002B312C /* AdministrationCallCustomView.xib in Resources */,
 				006A22072C29FF6800A89B6F /* MailBoxViewController.xib in Resources */,
 				006A21F62C29EB0400A89B6F /* MailBoxTableViewCell.xib in Resources */,
 				00B2B6BE2C29E21C0071401E /* Base in Resources */,
+				00A350282C2ACCD2002B312C /* SupportEMailCustomView.xib in Resources */,
 				006A21EB2C29E76D00A89B6F /* TechnicalSupportViewController.xib in Resources */,
 				006A22032C29FF0E00A89B6F /* MailTableViewCell.xib in Resources */,
 				00B2B6CB2C29E31E0071401E /* HomeViewController.xib in Resources */,
@@ -282,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				006A220D2C2A0B7200A89B6F /* CustomSegmentControl.swift in Sources */,
 				006A21F02C29E82700A89B6F /* BaseViewController.swift in Sources */,
 				006A21F72C29EB0400A89B6F /* MailBoxTableViewCell.swift in Sources */,
 				006A22042C29FF0E00A89B6F /* MailTableViewCell.swift in Sources */,
@@ -292,7 +349,10 @@
 				006A21FD2C29EDB300A89B6F /* UIView+DD.swift in Sources */,
 				006A21F22C29E85200A89B6F /* BaseViewModel.swift in Sources */,
 				006A21FB2C29EBF200A89B6F /* UITableView+Extension.swift in Sources */,
+				006A220F2C2A0B9C00A89B6F /* NibLoadingView.swift in Sources */,
+				00A350272C2ACCD2002B312C /* SupportEMailCustomView.swift in Sources */,
 				006A22082C29FF6800A89B6F /* MailBoxViewController.swift in Sources */,
+				00A3502C2C2AD4AF002B312C /* AdministrationCallCustomView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

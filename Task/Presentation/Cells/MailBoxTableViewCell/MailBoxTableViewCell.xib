@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7S-JR-pI3">
-                        <rect key="frame" x="16" y="0.0" width="303" height="86"/>
+                        <rect key="frame" x="20" y="0.0" width="295" height="86"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sms 2" translatesAutoresizingMaskIntoConstraints="NO" id="pGZ-Dn-za0">
                                 <rect key="frame" x="20.000000000000004" y="22" width="42.333333333333343" height="42"/>
@@ -53,7 +53,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EJi-hH-0Kr">
-                                <rect key="frame" x="236.66666666666666" y="32.333333333333336" width="46.333333333333343" height="21.333333333333336"/>
+                                <rect key="frame" x="228.66666666666666" y="32.333333333333336" width="46.333333333333343" height="21.333333333333336"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNW-Dt-mzF">
                                         <rect key="frame" x="0.0" y="0.0" width="20.666666666666668" height="21"/>
@@ -102,9 +102,9 @@
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="c7S-JR-pI3" secondAttribute="bottom" constant="8" id="UZx-Pi-rXR"/>
                     <constraint firstItem="c7S-JR-pI3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="XfR-2S-Nnk"/>
-                    <constraint firstAttribute="trailing" secondItem="c7S-JR-pI3" secondAttribute="trailing" constant="16" id="arJ-bB-grZ"/>
+                    <constraint firstAttribute="trailing" secondItem="c7S-JR-pI3" secondAttribute="trailing" constant="20" id="arJ-bB-grZ"/>
                     <constraint firstItem="c7S-JR-pI3" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="lCb-of-DTM"/>
-                    <constraint firstItem="c7S-JR-pI3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="tD1-4b-byg"/>
+                    <constraint firstItem="c7S-JR-pI3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="tD1-4b-byg"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
