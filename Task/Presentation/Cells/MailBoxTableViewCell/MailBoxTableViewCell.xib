@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -21,9 +20,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7S-JR-pI3">
                         <rect key="frame" x="20" y="0.0" width="295" height="86"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sms 2" translatesAutoresizingMaskIntoConstraints="NO" id="pGZ-Dn-za0">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_store_house" translatesAutoresizingMaskIntoConstraints="NO" id="pGZ-Dn-za0">
                                 <rect key="frame" x="20.000000000000004" y="22" width="42.333333333333343" height="42"/>
-                                <color key="backgroundColor" name="SMSColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="pGZ-Dn-za0" secondAttribute="height" id="1VE-ga-of3"/>
                                     <constraint firstAttribute="height" constant="42.25" id="TAY-8Y-ck4"/>
@@ -36,59 +34,42 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="En6-i5-gmT">
-                                <rect key="frame" x="70.333333333333343" y="26" width="121.33333333333334" height="34"/>
+                                <rect key="frame" x="70.333333333333314" y="25" width="110.66666666666669" height="36"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mail Box" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VaS-aa-8To">
-                                        <rect key="frame" x="0.0" y="0.0" width="57.666666666666664" height="17"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adminstration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VaS-aa-8To">
+                                        <rect key="frame" x="0.0" y="0.0" width="101" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 Mails Sent. 11 Answered " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QpV-UX-fjt">
-                                        <rect key="frame" x="0.0" y="17" width="121.33333333333333" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                        <color key="textColor" systemColor="systemGray2Color"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+966 (564) 304-1372" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QpV-UX-fjt">
+                                        <rect key="frame" x="0.0" y="18" width="110.66666666666667" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                                        <color key="textColor" name="SubtitleCustomGrey"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EJi-hH-0Kr">
-                                <rect key="frame" x="228.66666666666666" y="32.333333333333336" width="46.333333333333343" height="21.333333333333336"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNW-Dt-mzF">
-                                        <rect key="frame" x="0.0" y="0.0" width="20.666666666666668" height="21"/>
-                                        <color key="backgroundColor" name="RedColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="KNW-Dt-mzF" secondAttribute="height" id="gye-TV-7WC"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="circuler" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RightNavButton" translatesAutoresizingMaskIntoConstraints="NO" id="yF8-U2-a6A">
-                                        <rect key="frame" x="28.666666666666657" y="0.0" width="17.666666666666671" height="21"/>
-                                    </imageView>
-                                </subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZW-9b-4Zg">
+                                <rect key="frame" x="248" y="28.666666666666664" width="29" height="28.666666666666664"/>
                                 <constraints>
-                                    <constraint firstItem="KNW-Dt-mzF" firstAttribute="width" secondItem="EJi-hH-0Kr" secondAttribute="width" multiplier="0.45" id="XBq-Qs-XBJ"/>
+                                    <constraint firstAttribute="height" constant="28.940000000000001" id="dKP-xi-GZ8"/>
+                                    <constraint firstAttribute="width" secondItem="MZW-9b-4Zg" secondAttribute="height" id="dpj-d5-aWs"/>
                                 </constraints>
-                            </stackView>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="ic_call">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="CustomGrey"/>
                         <constraints>
-                            <constraint firstItem="EJi-hH-0Kr" firstAttribute="centerY" secondItem="pGZ-Dn-za0" secondAttribute="centerY" id="6hq-c9-wpx"/>
                             <constraint firstItem="pGZ-Dn-za0" firstAttribute="centerY" secondItem="c7S-JR-pI3" secondAttribute="centerY" id="8xK-Pq-JG0"/>
                             <constraint firstItem="En6-i5-gmT" firstAttribute="leading" secondItem="pGZ-Dn-za0" secondAttribute="trailing" constant="8" id="9Ru-vC-K2t"/>
-                            <constraint firstItem="EJi-hH-0Kr" firstAttribute="height" secondItem="pGZ-Dn-za0" secondAttribute="height" multiplier="0.5" id="Nw0-bw-XDg"/>
-                            <constraint firstAttribute="trailing" secondItem="EJi-hH-0Kr" secondAttribute="trailing" constant="20" id="SGg-Xc-Sm7"/>
+                            <constraint firstItem="MZW-9b-4Zg" firstAttribute="centerY" secondItem="pGZ-Dn-za0" secondAttribute="centerY" id="HMU-ah-olO"/>
+                            <constraint firstAttribute="trailing" secondItem="MZW-9b-4Zg" secondAttribute="trailing" constant="18" id="ILx-XT-k5t"/>
+                            <constraint firstItem="MZW-9b-4Zg" firstAttribute="width" secondItem="MZW-9b-4Zg" secondAttribute="height" id="SBO-E6-sB4"/>
                             <constraint firstItem="pGZ-Dn-za0" firstAttribute="leading" secondItem="c7S-JR-pI3" secondAttribute="leading" constant="20" id="UWd-GB-F14"/>
-                            <constraint firstItem="EJi-hH-0Kr" firstAttribute="width" secondItem="pGZ-Dn-za0" secondAttribute="width" multiplier="1.1" id="bvM-qO-2r7"/>
                             <constraint firstItem="En6-i5-gmT" firstAttribute="centerY" secondItem="pGZ-Dn-za0" secondAttribute="centerY" id="iSy-O7-a5g"/>
                             <constraint firstAttribute="height" constant="86" id="nzf-lQ-4nn"/>
                         </constraints>
@@ -116,19 +97,13 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="RightNavButton" width="18" height="13"/>
-        <image name="sms 2" width="25" height="25"/>
+        <image name="ic_call" width="30" height="30"/>
+        <image name="ic_store_house" width="43" height="43"/>
         <namedColor name="CustomGrey">
             <color red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="RedColor">
-            <color red="1" green="0.17254901960784313" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="SubtitleCustomGrey">
+            <color red="0.53725490196078429" green="0.54117647058823526" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="SMSColor">
-            <color red="0.12941176470588237" green="0.63529411764705879" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

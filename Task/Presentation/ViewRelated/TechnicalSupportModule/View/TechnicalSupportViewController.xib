@@ -11,7 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TechnicalSupportViewController" customModule="Task" customModuleProvider="target">
             <connections>
+                <outlet property="adminstrationCallView" destination="HyB-Db-laC" id="Q1j-X5-doL"/>
                 <outlet property="mainTableView" destination="VrL-hs-BoM" id="Pj4-VP-MxI"/>
+                <outlet property="supportEmailView" destination="3TH-zd-5LM" id="Ccw-ew-fwD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VrL-hs-BoM">
-                    <rect key="frame" x="0.0" y="387.33333333333326" width="393" height="414.66666666666674"/>
+                    <rect key="frame" x="0.0" y="375.33333333333326" width="393" height="426.66666666666674"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUPPORT EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAW-f9-uOn">
@@ -31,7 +33,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3TH-zd-5LM" customClass="SupportEMailCustomView" customModule="Task" customModuleProvider="target">
-                    <rect key="frame" x="20" y="123" width="353" height="68"/>
+                    <rect key="frame" x="20" y="119" width="353" height="68"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="68.159999999999997" id="J6t-gm-FXS"/>
@@ -43,13 +45,13 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Administration CALL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeX-eu-0Uk">
-                    <rect key="frame" x="20" y="221" width="353" height="18"/>
+                    <rect key="frame" x="20" y="217" width="353" height="18"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                     <color key="textColor" name="CustomDarkGrey"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HyB-Db-laC" customClass="AdministrationCallCustomView" customModule="Task" customModuleProvider="target">
-                    <rect key="frame" x="20" y="255.00000000000003" width="353" height="68.333333333333343"/>
+                    <rect key="frame" x="20" y="247.00000000000003" width="353" height="68.333333333333343"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="68.159999999999997" id="v46-jD-KvC"/>
@@ -60,8 +62,8 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Storehouses CALL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHR-g3-vpy">
-                    <rect key="frame" x="20" y="353.33333333333331" width="353" height="18"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STOREHOUSES CALL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHR-g3-vpy">
+                    <rect key="frame" x="20" y="345.33333333333331" width="353" height="18"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -73,7 +75,7 @@
                 <constraint firstItem="HyB-Db-laC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="5mm-rR-rjG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HyB-Db-laC" secondAttribute="trailing" constant="20" id="9Yf-s0-tBa"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DeX-eu-0Uk" secondAttribute="trailing" constant="20" id="9lh-yx-Gys"/>
-                <constraint firstItem="HyB-Db-laC" firstAttribute="top" secondItem="DeX-eu-0Uk" secondAttribute="bottom" constant="16" id="A6C-gt-CXY"/>
+                <constraint firstItem="HyB-Db-laC" firstAttribute="top" secondItem="DeX-eu-0Uk" secondAttribute="bottom" constant="12" id="A6C-gt-CXY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="VrL-hs-BoM" secondAttribute="bottom" constant="16" id="Cni-U9-nSs"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VrL-hs-BoM" secondAttribute="trailing" id="EfT-D6-6JM"/>
                 <constraint firstItem="VrL-hs-BoM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="FTO-Va-GPY"/>
@@ -81,8 +83,8 @@
                 <constraint firstItem="DeX-eu-0Uk" firstAttribute="top" secondItem="3TH-zd-5LM" secondAttribute="bottom" constant="30" id="JIg-mj-rWG"/>
                 <constraint firstItem="xHR-g3-vpy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="OZJ-tt-cI6"/>
                 <constraint firstItem="3TH-zd-5LM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="OzD-sC-RRg"/>
-                <constraint firstItem="VrL-hs-BoM" firstAttribute="top" secondItem="xHR-g3-vpy" secondAttribute="bottom" constant="16" id="Q1G-Ah-D8r"/>
-                <constraint firstItem="3TH-zd-5LM" firstAttribute="top" secondItem="pAW-f9-uOn" secondAttribute="bottom" constant="16" id="VBo-pL-64f"/>
+                <constraint firstItem="VrL-hs-BoM" firstAttribute="top" secondItem="xHR-g3-vpy" secondAttribute="bottom" constant="12" id="Q1G-Ah-D8r"/>
+                <constraint firstItem="3TH-zd-5LM" firstAttribute="top" secondItem="pAW-f9-uOn" secondAttribute="bottom" constant="12" id="VBo-pL-64f"/>
                 <constraint firstItem="pAW-f9-uOn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Ycr-0U-vpN"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3TH-zd-5LM" secondAttribute="trailing" constant="20" id="bNz-OC-fbV"/>
                 <constraint firstItem="pAW-f9-uOn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="dog-Bm-Qxs"/>

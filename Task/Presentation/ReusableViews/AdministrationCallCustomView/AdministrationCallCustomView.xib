@@ -18,22 +18,54 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="96"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sms 2" translatesAutoresizingMaskIntoConstraints="NO" id="GFL-Ad-opg">
-                    <rect key="frame" x="12.000000000000004" y="39.333333333333329" width="42.333333333333343" height="42.333333333333329"/>
-                    <color key="backgroundColor" name="SMSColor"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="GFL-Ad-opg" secondAttribute="height" id="6Kh-qi-NFj"/>
-                        <constraint firstAttribute="height" constant="42.25" id="VBt-5o-MAH"/>
-                    </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="circuler" value="YES"/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="20"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-16" translatesAutoresizingMaskIntoConstraints="NO" id="NWV-De-iSQ">
+                    <rect key="frame" x="12" y="39.333333333333329" width="94.666666666666671" height="42.333333333333329"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 413" translatesAutoresizingMaskIntoConstraints="NO" id="GFL-Ad-opg">
+                            <rect key="frame" x="0.0" y="0.0" width="42.333333333333336" height="42.333333333333336"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="GFL-Ad-opg" secondAttribute="height" id="6Kh-qi-NFj"/>
+                                <constraint firstAttribute="height" constant="42.25" id="VBt-5o-MAH"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="circuler" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 414" translatesAutoresizingMaskIntoConstraints="NO" id="gvv-Ci-Uc0">
+                            <rect key="frame" x="26.333333333333332" y="0.0" width="42.333333333333343" height="42.333333333333336"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="gvv-Ci-Uc0" secondAttribute="height" id="77Y-RZ-VeE"/>
+                                <constraint firstAttribute="height" constant="42.25" id="Rl0-lI-IoY"/>
+                                <constraint firstAttribute="width" secondItem="gvv-Ci-Uc0" secondAttribute="height" id="jsr-xN-M43"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="circuler" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse 415" translatesAutoresizingMaskIntoConstraints="NO" id="glg-yd-l2X">
+                            <rect key="frame" x="52.666666666666671" y="0.0" width="42" height="42.333333333333336"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="glg-yd-l2X" secondAttribute="height" id="dgy-ok-PVM"/>
+                                <constraint firstAttribute="width" secondItem="glg-yd-l2X" secondAttribute="height" id="qQS-7g-iBG"/>
+                                <constraint firstAttribute="height" constant="42.25" id="w6Y-Iw-ElC"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="circuler" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                    </subviews>
+                </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="I8t-Gb-xoE">
-                    <rect key="frame" x="62.333333333333336" y="42.666666666666664" width="110.66666666666666" height="35.999999999999993"/>
+                    <rect key="frame" x="114.66666666666666" y="42.666666666666664" width="110.66666666666666" height="35.999999999999993"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adminstration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="he0-vB-OVn">
                             <rect key="frame" x="0.0" y="0.0" width="101" height="18"/>
@@ -49,26 +81,39 @@
                         </label>
                     </subviews>
                 </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hya-GR-gZY">
+                    <rect key="frame" x="344" y="46" width="29" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28.940000000000001" id="OPq-o9-Bh5"/>
+                        <constraint firstAttribute="width" secondItem="hya-GR-gZY" secondAttribute="height" id="VxA-m3-vGi"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="ic_call">
+                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                    </buttonConfiguration>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="CustomGrey"/>
             <constraints>
-                <constraint firstItem="I8t-Gb-xoE" firstAttribute="leading" secondItem="GFL-Ad-opg" secondAttribute="trailing" constant="8" id="0DP-Un-nvl"/>
-                <constraint firstItem="GFL-Ad-opg" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="5XZ-dg-vMW"/>
-                <constraint firstItem="I8t-Gb-xoE" firstAttribute="centerY" secondItem="GFL-Ad-opg" secondAttribute="centerY" id="9Jr-1j-0od"/>
-                <constraint firstItem="GFL-Ad-opg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="WO0-ta-eQD"/>
+                <constraint firstAttribute="trailing" secondItem="hya-GR-gZY" secondAttribute="trailing" constant="20" id="3u0-8I-amC"/>
+                <constraint firstItem="I8t-Gb-xoE" firstAttribute="leading" secondItem="NWV-De-iSQ" secondAttribute="trailing" constant="8" id="BTm-pI-FTN"/>
+                <constraint firstItem="hya-GR-gZY" firstAttribute="centerY" secondItem="NWV-De-iSQ" secondAttribute="centerY" id="Maa-xh-5gZ"/>
+                <constraint firstItem="NWV-De-iSQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="12" id="UpW-fX-73o"/>
+                <constraint firstItem="NWV-De-iSQ" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="XkI-a0-c5h"/>
+                <constraint firstItem="I8t-Gb-xoE" firstAttribute="centerY" secondItem="NWV-De-iSQ" secondAttribute="centerY" id="n23-rW-3ni"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="35.877862595419849" y="29.577464788732396"/>
         </view>
     </objects>
     <resources>
-        <image name="sms 2" width="25" height="25"/>
+        <image name="Ellipse 413" width="43" height="44"/>
+        <image name="Ellipse 414" width="44" height="44"/>
+        <image name="Ellipse 415" width="43" height="44"/>
+        <image name="ic_call" width="30" height="30"/>
         <namedColor name="CustomGrey">
             <color red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="SMSColor">
-            <color red="0.12941176470588237" green="0.63529411764705879" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SubtitleCustomGrey">
             <color red="0.53725490196078429" green="0.54117647058823526" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
