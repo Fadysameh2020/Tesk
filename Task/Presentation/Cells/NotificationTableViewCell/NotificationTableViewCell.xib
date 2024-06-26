@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="111" id="KGk-i7-Jjw" customClass="NotificationTableViewCell" customModule="Task" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="69.333335876464844"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69.333335876464844"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2U-se-ubz">
+                        <rect key="frame" x="19.999999999999993" y="10" width="122.33333333333331" height="14.333333333333336"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 min ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MrH-Lr-YEP">
+                        <rect key="frame" x="259" y="10" width="61" height="14.333333333333336"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" name="MailGreyColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis nunc a molestie dictum." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocQ-o3-AHZ">
+                        <rect key="frame" x="20" y="36.333333333333336" width="280" height="26.333333333333336"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xt9-sZ-YqG">
+                        <rect key="frame" x="20" y="68.333333333333329" width="280" height="1"/>
+                        <color key="backgroundColor" name="SeperatorTableViewColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="K9t-GI-gj3"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="MrH-Lr-YEP" secondAttribute="trailing" id="1Kk-aH-1QX"/>
+                    <constraint firstItem="ocQ-o3-AHZ" firstAttribute="top" secondItem="W2U-se-ubz" secondAttribute="bottom" constant="12" id="7a1-17-7Gz"/>
+                    <constraint firstItem="MrH-Lr-YEP" firstAttribute="centerY" secondItem="W2U-se-ubz" secondAttribute="centerY" id="GjR-qC-QeE"/>
+                    <constraint firstItem="ocQ-o3-AHZ" firstAttribute="trailing" secondItem="MrH-Lr-YEP" secondAttribute="trailing" constant="-20" id="OTy-f1-zA9"/>
+                    <constraint firstItem="ocQ-o3-AHZ" firstAttribute="leading" secondItem="W2U-se-ubz" secondAttribute="leading" id="YnL-xn-yU7"/>
+                    <constraint firstItem="W2U-se-ubz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="ZBK-fW-YBe"/>
+                    <constraint firstAttribute="bottom" secondItem="xt9-sZ-YqG" secondAttribute="bottom" id="ZPB-3k-cQa"/>
+                    <constraint firstAttribute="trailing" secondItem="xt9-sZ-YqG" secondAttribute="trailing" constant="20" id="jIF-Fm-d8g"/>
+                    <constraint firstItem="W2U-se-ubz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="p4l-0i-B6c"/>
+                    <constraint firstItem="xt9-sZ-YqG" firstAttribute="leading" secondItem="W2U-se-ubz" secondAttribute="leading" id="wYS-kp-xGF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="subTitleLabel" destination="ocQ-o3-AHZ" id="lxQ-c3-DRq"/>
+                <outlet property="titleLabel" destination="W2U-se-ubz" id="T0Y-R3-A8d"/>
+            </connections>
+            <point key="canvasLocation" x="54.961832061068698" y="43.661971830985919"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="MailGreyColor">
+            <color red="0.43529411764705883" green="0.49411764705882355" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SeperatorTableViewColor">
+            <color red="0.37254901960784315" green="0.42352941176470588" blue="0.4823529411764706" alpha="0.19" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

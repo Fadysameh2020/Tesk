@@ -14,7 +14,6 @@ class MailBoxTableViewCell: UITableViewCell {
     @IBOutlet weak var subTitleLabel: UILabel!
 }
 
-
 class CustomHeaderView: UITableViewHeaderFooterView {
     
     let titleLabel: UILabel = {
