@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		003281202C2C393300562246 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0032811F2C2C393300562246 /* NotificationTableViewCell.xib */; };
+		003281212C2C393300562246 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0032811E2C2C393300562246 /* NotificationTableViewCell.swift */; };
+		003281252C2C3A3200562246 /* NotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 003281242C2C3A3200562246 /* NotificationViewController.xib */; };
+		003281262C2C3A3200562246 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003281232C2C3A3200562246 /* NotificationViewController.swift */; };
+		0032812A2C2C474400562246 /* DeleteAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 003281292C2C474400562246 /* DeleteAlertView.xib */; };
+		0032812B2C2C474400562246 /* DeleteAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003281282C2C474400562246 /* DeleteAlertView.swift */; };
 		006A21EB2C29E76D00A89B6F /* TechnicalSupportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006A21EA2C29E76D00A89B6F /* TechnicalSupportViewController.xib */; };
 		006A21EC2C29E76D00A89B6F /* TechnicalSupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A21E92C29E76D00A89B6F /* TechnicalSupportViewController.swift */; };
 		006A21F02C29E82700A89B6F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A21EF2C29E82700A89B6F /* BaseViewController.swift */; };
@@ -37,6 +43,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0032811E2C2C393300562246 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		0032811F2C2C393300562246 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
+		003281232C2C3A3200562246 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		003281242C2C3A3200562246 /* NotificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationViewController.xib; sourceTree = "<group>"; };
+		003281282C2C474400562246 /* DeleteAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAlertView.swift; sourceTree = "<group>"; };
+		003281292C2C474400562246 /* DeleteAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteAlertView.xib; sourceTree = "<group>"; };
 		006A21E92C29E76D00A89B6F /* TechnicalSupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnicalSupportViewController.swift; sourceTree = "<group>"; };
 		006A21EA2C29E76D00A89B6F /* TechnicalSupportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TechnicalSupportViewController.xib; sourceTree = "<group>"; };
 		006A21EF2C29E82700A89B6F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +91,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0032811D2C2C391000562246 /* NotificationTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0032811E2C2C393300562246 /* NotificationTableViewCell.swift */,
+				0032811F2C2C393300562246 /* NotificationTableViewCell.xib */,
+			);
+			path = NotificationTableViewCell;
+			sourceTree = "<group>";
+		};
+		003281222C2C39EF00562246 /* NotificationModule */ = {
+			isa = PBXGroup;
+			children = (
+				003281232C2C3A3200562246 /* NotificationViewController.swift */,
+				003281242C2C3A3200562246 /* NotificationViewController.xib */,
+			);
+			path = NotificationModule;
+			sourceTree = "<group>";
+		};
+		003281272C2C470E00562246 /* DeleteAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				003281282C2C474400562246 /* DeleteAlertView.swift */,
+				003281292C2C474400562246 /* DeleteAlertView.xib */,
+			);
+			path = DeleteAlertView;
+			sourceTree = "<group>";
+		};
 		006A21E72C29E73600A89B6F /* TechnicalSupportModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,7 +147,7 @@
 		006A21EE2C29E81100A89B6F /* ViewRelated */ = {
 			isa = PBXGroup;
 			children = (
-				00C255832C2B4D2E0056E347 /* NewMailBoxModule */,
+				003281222C2C39EF00562246 /* NotificationModule */,
 				006A21FF2C29FE4C00A89B6F /* MailBoxModule */,
 				006A21E72C29E73600A89B6F /* TechnicalSupportModule */,
 				00B2B6C72C29E3070071401E /* HomeModule */,
@@ -119,6 +158,7 @@
 		006A21F32C29EAC900A89B6F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				0032811D2C2C391000562246 /* NotificationTableViewCell */,
 				006A22002C29FEEB00A89B6F /* MailTableViewCell */,
 				006A21FE2C29FE1E00A89B6F /* MailBoxTableViewCell */,
 			);
@@ -182,6 +222,8 @@
 		00A350232C2ACC9A002B312C /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
+				003281272C2C470E00562246 /* DeleteAlertView */,
+				00C255832C2B4D2E0056E347 /* NewMailBoxView */,
 				00A350292C2AD486002B312C /* AdministrationCallCustomView */,
 				00A350242C2ACCAF002B312C /* SupportEMailCustomView */,
 				006A22092C2A0B5100A89B6F /* CustomSegmentControl */,
@@ -265,13 +307,13 @@
 			path = HomeModule;
 			sourceTree = "<group>";
 		};
-		00C255832C2B4D2E0056E347 /* NewMailBoxModule */ = {
+		00C255832C2B4D2E0056E347 /* NewMailBoxView */ = {
 			isa = PBXGroup;
 			children = (
 				00C255842C2B4D690056E347 /* NewMailBoxView.swift */,
 				00C255852C2B4D690056E347 /* NewMailBoxView.xib */,
 			);
-			path = NewMailBoxModule;
+			path = NewMailBoxView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,11 +380,14 @@
 				00A3502D2C2AD4AF002B312C /* AdministrationCallCustomView.xib in Resources */,
 				006A22072C29FF6800A89B6F /* MailBoxViewController.xib in Resources */,
 				006A21F62C29EB0400A89B6F /* MailBoxTableViewCell.xib in Resources */,
+				0032812A2C2C474400562246 /* DeleteAlertView.xib in Resources */,
 				00B2B6BE2C29E21C0071401E /* Base in Resources */,
 				00A350282C2ACCD2002B312C /* SupportEMailCustomView.xib in Resources */,
+				003281202C2C393300562246 /* NotificationTableViewCell.xib in Resources */,
 				006A21EB2C29E76D00A89B6F /* TechnicalSupportViewController.xib in Resources */,
 				006A22032C29FF0E00A89B6F /* MailTableViewCell.xib in Resources */,
 				00B2B6CB2C29E31E0071401E /* HomeViewController.xib in Resources */,
+				003281252C2C3A3200562246 /* NotificationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,16 +401,19 @@
 				00C255872C2B4D690056E347 /* NewMailBoxView.swift in Sources */,
 				006A220D2C2A0B7200A89B6F /* CustomSegmentControl.swift in Sources */,
 				006A21F02C29E82700A89B6F /* BaseViewController.swift in Sources */,
+				0032812B2C2C474400562246 /* DeleteAlertView.swift in Sources */,
 				006A21F72C29EB0400A89B6F /* MailBoxTableViewCell.swift in Sources */,
 				006A22042C29FF0E00A89B6F /* MailTableViewCell.swift in Sources */,
 				00B2B6B22C29E21A0071401E /* AppDelegate.swift in Sources */,
 				00B2B6B42C29E21A0071401E /* SceneDelegate.swift in Sources */,
+				003281212C2C393300562246 /* NotificationTableViewCell.swift in Sources */,
 				006A21EC2C29E76D00A89B6F /* TechnicalSupportViewController.swift in Sources */,
 				00B2B6CA2C29E31E0071401E /* HomeViewController.swift in Sources */,
 				006A21FD2C29EDB300A89B6F /* UIView+DD.swift in Sources */,
 				006A21F22C29E85200A89B6F /* BaseViewModel.swift in Sources */,
 				006A21FB2C29EBF200A89B6F /* UITableView+Extension.swift in Sources */,
 				006A220F2C2A0B9C00A89B6F /* NibLoadingView.swift in Sources */,
+				003281262C2C3A3200562246 /* NotificationViewController.swift in Sources */,
 				00A350272C2ACCD2002B312C /* SupportEMailCustomView.swift in Sources */,
 				006A22082C29FF6800A89B6F /* MailBoxViewController.swift in Sources */,
 				00A3502C2C2AD4AF002B312C /* AdministrationCallCustomView.swift in Sources */,

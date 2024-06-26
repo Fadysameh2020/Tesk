@@ -1,23 +1,21 @@
 //
-//  MailBoxViewController.swift
+//  NotificationViewController.swift
 //  Task
 //
-//  Created by Fady Sameh on 6/24/24.
+//  Created by Fady Sameh on 6/26/24.
 //
 
 import UIKit
 import Combine
 
-class MailBoxViewController: UIViewController {
+class NotificationViewController: UIViewController {
     
-    @IBOutlet weak var segmentedControlView: CustomSegmentControl!
     @IBOutlet private weak var mainTableView: UITableView!
     
-    @IBOutlet weak var addButton: UIButton!
     private var cancellables = Set<AnyCancellable>()
     
-    lazy private var alertView: NewMailBoxView = {
-        let alert = NewMailBoxView()
+    lazy private var alertView: DeleteAlertView = {
+        let alert = DeleteAlertView()
         alert.layer.cornerRadius = 16
         alert.translatesAutoresizingMaskIntoConstraints = false 
         return alert
@@ -45,21 +43,15 @@ class MailBoxViewController: UIViewController {
         
         setupUI()
         setupAddNewMailAlert()
-        addButton.isHidden = false
     }
     
     @IBAction func clearMessagesOnPressed(_ sender: Any) {
-        messages.removeAll()
-        mainTableView.reloadData()
-    }
-    
-    @IBAction func addMessageOnPressed(_ sender: Any) {
         showAlertView()
     }
     
 }
 
-extension MailBoxViewController {
+extension NotificationViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         removeAlertView()
@@ -67,12 +59,11 @@ extension MailBoxViewController {
     
 }
 
-extension MailBoxViewController {
+extension NotificationViewController {
     private func setupUI() {
         registerCells()
         setupTableViewDelegates()
         setupBackButton()
-        setupSegmentControlObserver()
     }
     
     private func setupAddNewMailAlert() {
@@ -80,7 +71,17 @@ extension MailBoxViewController {
             .addObserver()
         
         alertView
-            .doneButtonPublisher
+            .deleteButtonPublisher
+            .sink { [weak self] _ in
+                guard let self = self else { return }
+                messages.removeAll()
+                mainTableView.reloadData()
+                removeAlertView()
+            }
+            .store(in: &cancellables)
+        
+        alertView
+            .cancelButtonPublisher
             .sink { [weak self] _ in
                 guard let self = self else { return }
                 removeAlertView()
@@ -96,7 +97,7 @@ extension MailBoxViewController {
             NSLayoutConstraint.activate([
                 alertView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
                 alertView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-                alertView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.86) // 5/6 of the view's height
+                alertView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5) // 5/6 of the view's height
             ])
             
             alertViewCenterYConstraint = alertView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
@@ -111,6 +112,9 @@ extension MailBoxViewController {
                 self.alertViewBottomConstraint?.isActive = true
                 self.view.layoutIfNeeded()
                 self.view.backgroundColor = UIColor.white.withAlphaComponent(0.4)
+                self.mainTableView.backgroundColor = UIColor.white.withAlphaComponent(0.4)
+                self.alertView.tintColor = UIColor.white
+                
             })
             mainTableView.isUserInteractionEnabled = false
         }
@@ -124,6 +128,7 @@ extension MailBoxViewController {
                 self.alertViewCenterYConstraint?.isActive = true
                 self.view.layoutIfNeeded()
                 self.view.backgroundColor = UIColor.white
+                self.mainTableView.backgroundColor = UIColor.white
             }) { [weak self] completed in
                 guard let self = self else { return }
                 if completed {
@@ -133,73 +138,14 @@ extension MailBoxViewController {
             mainTableView.isUserInteractionEnabled = true
         }
     }
-    
+
     private func setupTableViewDelegates() {
         mainTableView.delegate = self
         mainTableView.dataSource = self
     }
     
     private func registerCells() {
-        mainTableView.registerCell(cellType: MailTableViewCell.self)
-    }
-    
-    private func setupSegmentControlObserver() {
-        // Subscribe to segmentedControl changes
-        segmentedControlView.segmentControl.publisher()
-            .receive(on: RunLoop.main)
-            .sink { [weak self] selectedIndex in
-                guard let self = self else { return }
-                print("Selected Segment Index: \(selectedIndex)")
-                handleSegmentChange(index: selectedIndex)
-                mainTableView.reloadData()
-            }
-            .store(in: &cancellables)
-    }
-    
-    private func handleSegmentChange(index: Int) {
-        // Handle the segment change here
-        switch index {
-        case 0:
-            // Handle first segment
-            print("First segment selected")
-            messages.removeAll()
-            mainTableView.reloadData()
-            messages = [
-                MailBoxMessage(),
-                MailBoxMessage(),
-                MailBoxMessage(),
-                MailBoxMessage(),
-                MailBoxMessage(),
-                MailBoxMessage(),
-                MailBoxMessage(isRead: true),
-                MailBoxMessage(isRead: true),
-                MailBoxMessage(isRead: true),
-                MailBoxMessage(isRead: true),
-                MailBoxMessage(isRead: true)
-            ]
-            addButton.isHidden = false
-        case 1:
-            // Handle second segment
-            print("Second segment selected")
-            messages.removeAll()
-            mainTableView.reloadData()
-            messages = [
-                MailBoxMessage(),
-                MailBoxMessage(),
-                MailBoxMessage(),
-                MailBoxMessage(),
-                MailBoxMessage(isRead: true),
-                MailBoxMessage(isRead: true),
-                MailBoxMessage(isRead: true),
-                MailBoxMessage(isRead: true),
-                MailBoxMessage(isRead: true),
-                MailBoxMessage(isRead: true),
-                MailBoxMessage(isRead: true)
-            ]
-            addButton.isHidden = true
-        default:
-            break
-        }
+        mainTableView.registerCell(cellType: NotificationTableViewCell.self)
     }
     
     private func setupBackButton() {
@@ -220,7 +166,7 @@ extension MailBoxViewController {
     }
 }
 
-extension MailBoxViewController: UITableViewDelegate, UITableViewDataSource {
+extension NotificationViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -231,7 +177,7 @@ extension MailBoxViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(for: indexPath) as MailTableViewCell
+        let cell = tableView.dequeueReusableCell(for: indexPath) as NotificationTableViewCell
         
         let item = messages[indexPath.row]
         
@@ -239,13 +185,13 @@ extension MailBoxViewController: UITableViewDelegate, UITableViewDataSource {
         cell.subTitleLabel?.text = item.subtitle
         
         if item.isRead {
-            cell.readIcon.isHidden = true
             cell.titleLabel.textColor = UIColor.mssgTitle
             cell.subTitleLabel.textColor = UIColor.mssgSubtitle
+            cell.backgroundColor = UIColor.white
         } else {
-            cell.readIcon.isHidden = false
             cell.titleLabel.textColor = UIColor.black
             cell.subTitleLabel.textColor = UIColor.black
+            cell.backgroundColor = UIColor.notification
         }
         
         return cell
@@ -253,12 +199,29 @@ extension MailBoxViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let viewController = NotificationViewController()
-        navigationController?.pushViewController(viewController, animated: true)
+        print("pressed on index: \(indexPath.row)")
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 69.32
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+                
+        let deleteAction = UIContextualAction(style: .destructive, title: "") { [weak self] (action, view, completionHandler) in
+            guard let self = self else { return }
+            self.messages.remove(at: indexPath.row)
+            mainTableView.deleteRows(at: [indexPath], with: .left)
+            mainTableView.reloadData()
+            
+            completionHandler(true)
+        }
+        deleteAction.backgroundColor = UIColor.deleteViewBackground
+        deleteAction.image = UIImage.deletButton
+        
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        return configuration
+    }
+    
     
 }
